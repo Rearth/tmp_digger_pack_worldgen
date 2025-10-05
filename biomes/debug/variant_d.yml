@@ -1,0 +1,8 @@
+id: VARIANT_D
+type: BIOME
+extends: LOW_DETAIL_EQ
+
+vanilla: minecraft:plains
+
+palette:
+  - BLOCK:minecraft:pink_wool: 319

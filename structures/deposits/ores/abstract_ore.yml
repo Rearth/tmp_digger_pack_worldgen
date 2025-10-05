@@ -1,0 +1,13 @@
+id: ABSTRACT_ORE
+type: ORE
+abstract: true
+
+replace:
+  - minecraft:stone
+  - minecraft:deepslate
+  - oritech_excavations:hard_stone
+  - oritech_excavations:harder_stone
+  - oritech_excavations:harderer_stone
+  - oritech_excavations:deeper_slate
+  - oritech_excavations:very_deep_slate
+  - oritech_excavations:deepest_slate

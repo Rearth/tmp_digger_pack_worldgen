@@ -1,0 +1,13 @@
+id: LOW_DETAIL_EQ
+abstract: true
+extends: BASE
+
+type: BIOME
+
+terrain:
+  sampler:
+    type: EXPRESSION
+    variables:
+      baseHeight: $meta.yml:baseY
+    expression: |
+      -y + baseHeight

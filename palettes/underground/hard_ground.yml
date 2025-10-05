@@ -1,0 +1,35 @@
+type: PALETTE
+id: HARD_GROUND
+
+layers:
+  - materials:
+      - minecraft:stone: 25
+      - oritech_excavations:hard_stone: 30
+      - oritech_excavations:harder_stone: 30
+      - oritech_excavations:harderer_stone: 30
+      - minecraft:deepslate: 30
+      - oritech_excavations:deeper_slate: 30
+      - oritech_excavations:very_deep_slate: 30
+      - oritech_excavations:deepest_slate: 30
+      - minecraft:obsidian: 30
+      - oritech_excavations:reinforced_obsidian: 30
+    layers: 1
+    sampler:
+      dimensions: 3
+      type: EXPRESSION
+      expression: |
+        ((y - min + offset(x,y,z)) / height) * -2 - 1
+      variables:
+        min: $meta.yml:digger.stoneStartY
+        max: $meta.yml:digger.stoneEndY
+        height: ${meta.yml:digger.stoneStartY} - ${meta.yml:digger.stoneEndY}
+      samplers:
+        offset:
+          dimensions: 3
+          type: EXPRESSION
+          expression: noise(x, y, z) * 5
+          samplers:
+            noise:
+              dimensions: 3
+              type: SIMPLEX
+              frequency: 0.08

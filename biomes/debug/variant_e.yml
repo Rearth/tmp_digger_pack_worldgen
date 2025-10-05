@@ -1,0 +1,8 @@
+id: VARIANT_E
+type: BIOME
+extends: LOW_DETAIL_EQ
+
+vanilla: minecraft:plains
+
+palette:
+  - BLOCK:minecraft:magenta_wool: 319

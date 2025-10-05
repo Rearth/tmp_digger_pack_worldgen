@@ -1,0 +1,8 @@
+id: VARIANT_H
+type: BIOME
+extends: LOW_DETAIL_EQ
+
+vanilla: minecraft:plains
+
+palette:
+  - BLOCK:minecraft:orange_wool: 319

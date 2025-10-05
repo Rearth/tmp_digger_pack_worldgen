@@ -1,0 +1,12 @@
+id: MEDIUM_DETAIL_EQ
+abstract: true
+extends: BASE
+
+type: BIOME
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: EXPRESSION
+    expression: |
+      globalEq(x,y,z)

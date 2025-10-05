@@ -1,0 +1,13 @@
+id: BASE
+type: BIOME
+abstract: true
+extends:
+  - DEPOSITS_DEFAULT
+  - ORES_DEFAULT
+  - CARVING_LAND
+
+slant-depth: 15
+
+features:
+  global-preprocessors:
+    - UNDERGROUND_LAVA_COLUMNS
