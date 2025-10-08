@@ -7,7 +7,5 @@ type: BIOME
 terrain:
   sampler:
     type: EXPRESSION
-    variables:
-      baseHeight: $meta.yml:baseY
     expression: |
-      -y + baseHeight
+      -y + 210 + continentalElevation(x, z)

@@ -1,5 +1,5 @@
 vars: &variables
-  height: 80
+  height: $meta.yml:continentalHeight
   heightVariation: 25
   elevationFactorOffset: 0.5
   baseHeight: $meta.yml:baseY
@@ -91,7 +91,7 @@ samplers:
       offset:
         dimensions: 2
         type: OPEN_SIMPLEX_2S
-        frequency: 1 / ${meta.yml:biomeSize} * 2
+        frequency: 1 / 300 * 2
 
 
   # returns a value between 0.2 and 1, describing the maximum height of a continental plate (e.g. is the continent flat or mountainy)
@@ -124,7 +124,7 @@ samplers:
           lacunarity: 2.4
           sampler:
             type: OPEN_SIMPLEX_2S
-            frequency: 1 / ${meta.yml:biomeSize} * 1
+            frequency: 1 / 300 * 1
         amplitude: 150
         sampler:
           dimensions: 2
@@ -136,7 +136,7 @@ samplers:
               dimensions: 2
               type: CELLULAR
               return: Distance2Sub
-              frequency: 1 / ${meta.yml:biomeSize} * 2
+              frequency: 1 / 300 * 2
               seed: 1
   
   # -1 to -0.85 = refuge, 0 - 0.3 = mesa, 0.8 - 1 = loops

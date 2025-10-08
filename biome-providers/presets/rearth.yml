@@ -1,0 +1,83 @@
+precipitation-map: &precipitationMap
+  dimensions: 2
+  type: FBM
+  octaves: 3
+  sampler:
+    type: OPEN_SIMPLEX_2
+    salt: 5055
+    frequency: 1 / ${meta.yml:precipationScale}
+
+
+
+biomes:
+  type: EXTRUSION
+  extrusions: []
+  provider:
+    type: PIPELINE
+    resolution: 2
+    initial-size: 10
+    blend:
+      amplitude: 1.5
+      sampler:
+        type: WHITE_NOISE
+    pipeline:
+      source: $biome-providers/sources/land_only.yml:source
+  
+      stages:
+        - type: REPLACE
+          sampler:
+            type: LINEAR
+            min: 0.1
+            max: 1
+            sampler:
+              type: EXPRESSION
+              expression: continentalElevation(x, z)
+          from: land
+          to: 
+            _lowlands: 10
+            _hills: 0
+            _mountains: 0
+            
+            
+        - type: REPLACE
+          from: _lowlands
+          sampler: *precipitationMap
+          to:
+            _lowlands_wet: 1
+            _lowlands_arid: 0
+            _lowlands_dry: 0
+        - type: REPLACE
+          from: _hills
+          sampler: *precipitationMap
+          to:
+            _hills_wet: 1
+            _hills_arid: 1
+            _hills_dry: 1
+        - type: REPLACE
+          from: _mountains
+          sampler: *precipitationMap
+          to:
+            _mountains_wet: 1
+            _mountains_arid: 1
+            _mountains_dry: 1
+
+
+        - << biome-providers/stages/fill-biome-zones.yml:stages
+
+        # ---
+  
+
+        # # add variants:
+
+        # # ---
+        # # Expansion and smoothing
+        # # - Make biomes bigger + blend the borders to look more natural.
+        - << biome-providers/stages/expand.yml:stages
+        # - << biome-providers/stages/expand.yml:stages
+        - << biome-providers/stages/smooth.yml:stages
+        # - << biome-providers/stages/smooth.yml:stages
+        # - << biome-providers/stages/smooth.yml:stages
+        # - << biome-providers/stages/expand.yml:stages
+        # - << biome-providers/stages/smooth.yml:stages
+        # - << biome-providers/stages/smooth.yml:stages
+        # - << biome-providers/stages/smooth.yml:stages

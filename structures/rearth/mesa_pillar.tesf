@@ -1,6 +1,6 @@
 // Mesa Pillar Configuration
 num randPrecision = 100;
-num minHeight = 50;
+num minHeight = 30;
 num maxHeight = 85;
 num minWidth = 10;
 num maxWidth = 16;

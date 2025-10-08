@@ -43,7 +43,7 @@ addons:
 # biomes: $biome-providers/presets/default.yml:biomes
 
 # Single biome - to change the single biome to use, check the configuration file.
-biomes: $biome-providers/presets/single.yml:biomes
+biomes: $biome-providers/presets/rearth.yml:biomes
 
 
 

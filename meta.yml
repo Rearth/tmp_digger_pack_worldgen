@@ -98,9 +98,12 @@ digger:
   stoneStartY: 200
   stoneEndY: -316
 
-biomeSize: 300
+biomeSize: 50
 continentSize: 500
+continentalHeight: 90
 baseY: 210
+
+precipationScale: 500
 
 
 palette-bottom: # Added to the bottom of every palette

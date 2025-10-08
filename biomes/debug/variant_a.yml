@@ -1,8 +1,8 @@
 id: VARIANT_A
 type: BIOME
-extends: LOW_DETAIL_EQ
+extends: DIG_BASE
 
 vanilla: minecraft:plains
 
 palette:
-  - BLOCK:minecraft:lime_concrete_powder: 319
+  - BLOCK:minecraft:red_concrete: 319

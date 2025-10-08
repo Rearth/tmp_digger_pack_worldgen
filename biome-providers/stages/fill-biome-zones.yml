@@ -1,0 +1,65 @@
+stages:
+  - type: REPLACE
+    from: _lowlands_wet
+    sampler:  &biomeSampler
+      type: "DOMAIN_WARP"
+      amplitude: 30
+      warp:
+        type: "FBM"
+        octaves: 3
+        sampler:
+          type: "OPEN_SIMPLEX_2S"
+          frequency: 1 / ${meta.yml:biomeSize}
+      sampler:
+        type: "CELLULAR"
+        return: "CellValue"
+        frequency: 1 / ${meta.yml:biomeSize}
+        seed: 2345263
+    to:
+      VARIANT_A: 1
+      VARIANT_B: 1
+      VARIANT_C: 1
+      VARIANT_D: 1
+  - type: REPLACE
+    from: _lowlands_arid
+    sampler: *biomeSampler
+    to:
+      VARIANT_E: 1
+      VARIANT_F: 1
+      VARIANT_G: 1
+      VARIANT_H: 1
+  - type: REPLACE
+    from: _lowlands_dry
+    sampler: *biomeSampler
+    to:
+      VARIANT_I: 1
+  - type: REPLACE
+    from: _hills_wet
+    sampler: *biomeSampler
+    to:
+      VARIANT_B: 1
+  - type: REPLACE
+    from: _hills_arid
+    sampler: *biomeSampler
+    to:
+      VARIANT_E: 1
+  - type: REPLACE
+    from: _hills_dry
+    sampler: *biomeSampler
+    to:
+      VARIANT_H: 1
+  - type: REPLACE
+    from: _mountains_wet
+    sampler: *biomeSampler
+    to:
+      VARIANT_C: 1
+  - type: REPLACE
+    from: _mountains_arid
+    sampler: *biomeSampler
+    to:
+      VARIANT_F: 1
+  - type: REPLACE
+    from: _mountains_dry
+    sampler: *biomeSampler
+    to:
+      VARIANT_I: 1

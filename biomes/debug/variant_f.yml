@@ -1,6 +1,6 @@
 id: VARIANT_F
 type: BIOME
-extends: LOW_DETAIL_EQ
+extends: DIG_BASE
 
 vanilla: minecraft:plains
 
