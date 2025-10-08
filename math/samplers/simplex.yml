@@ -6,10 +6,24 @@ samplers:
     sampler:
       type: OPEN_SIMPLEX_2
       frequency: 0.0075
+  simplex2s:
+    dimensions: 2
+    type: FBM
+    octaves: 2
+    sampler:
+      type: OPEN_SIMPLEX_2S
+      frequency: 0.0075
   simplex3:
     dimensions: 3
     type: FBM
     octaves: 4
     sampler:
       type: OPEN_SIMPLEX_2
+      frequency: 0.0075
+  simplex3s:
+    dimensions: 3
+    type: FBM
+    octaves: 2
+    sampler:
+      type: OPEN_SIMPLEX_2S
       frequency: 0.0075

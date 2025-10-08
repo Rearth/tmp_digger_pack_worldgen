@@ -1,0 +1,41 @@
+id: MESA_PILLARS
+type: FEATURE
+
+distributor:
+  type: AND
+  distributors:
+    - type: PADDED_GRID
+      width: 40
+      padding: 15
+      salt: 1923
+    - type: SAMPLER
+      sampler:
+        type: PROBABILITY
+        sampler:
+          type: OPEN_SIMPLEX_2
+          salt: 9112
+          frequency: 0.01
+      threshold: 0.8
+    - type: SAMPLER
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if(continentElevationFactor(x, z) < 0.3, 0, 2)
+      threshold: 1  # needs to be lower to spawn
+    - type: SAMPLER
+      sampler:
+        type: EXPRESSION
+        expression: |
+          if(globalFeature(x, z) < 0.3 && globalFeature(x, z) > 0, 0, 2)
+      threshold: 1  # needs to be lower to spawn
+
+locator:
+  type: TOP
+  range:
+    min: 200
+    max: 300
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: mesa_pillar

@@ -139,11 +139,12 @@ samplers:
               frequency: 1 / ${meta.yml:biomeSize} * 2
               seed: 1
   
+  # -1 to -0.85 = refuge, 0 - 0.3 = mesa, 0.8 - 1 = loops
   globalFeature: &globalFeature
     dimensions: 2
     type: CELLULAR
     return: CellValue
-    frequency: 1 / (${meta.yml:continentSize} / 5)
+    frequency: 1 / 400
 
   globalEq:
     dimensions: 3
@@ -198,7 +199,7 @@ samplers:
             worldCaves(x,y,z)
           )
 
-          + if (globalFeature(x / 4, z / 4) > 0.8, worldLoops(x,y,z), 0)
+          + if (globalFeature(x, z) > 0.8, worldLoops(x,y,z), 0)
         functions: *helpers
         samplers:
           continent: *continentalElevation
@@ -283,7 +284,7 @@ samplers:
             expression: |
               // positive / higher = solid
               if(y > archBase - 5 && y < archBase + archSize + 30,
-                max(arches(rotate(x, z, archAngle), y - 21, rotate(z, x, archAngle)) * 70, -4),
+                max(arches(rotate(x, z, archAngle), y - 21, rotate(z, x, archAngle)) * 70, -1),
                 0
               )
             functions:

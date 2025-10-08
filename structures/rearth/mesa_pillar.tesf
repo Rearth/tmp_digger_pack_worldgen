@@ -1,0 +1,56 @@
+// Mesa Pillar Configuration
+num randPrecision = 100;
+num minHeight = 50;
+num maxHeight = 85;
+num minWidth = 10;
+num maxWidth = 16;
+
+
+// Set random height and width
+num height = minHeight + randomInt(maxHeight - minHeight);
+num baseWidth = minWidth + randomInt(maxWidth - minWidth);
+
+
+for (num y = -10; y < height; y = y + 1) {
+    
+    num radius = sampler("simplex2s", y * 13, originX() + originY()) * 3 + baseWidth - 3;
+
+    num maxRadius = height - y;
+    radius = min(radius, maxRadius * 3 - 1);
+
+    num radiusBonus = min(6, max(0, 3 - y));
+    radius = radius + radiusBonus;
+
+    for (num x = -baseWidth - radiusBonus; x <= baseWidth + radiusBonus; x = x + 1) {
+        for (num z = -baseWidth - radiusBonus; z <= baseWidth + radiusBonus; z = z + 1) {
+
+            num warp = sampler("simplex2s", x * 6 + y * 5, z * 8 + y * 4);
+
+            if (pow(x, 2) + pow(z, 2) < pow(radius, 2) + warp * 25) {
+                
+                // Add 3D noise to the y-level to create variation
+                num noisyY = y + sampler("simplex2s", x * 20, y * 20 + z * 20) * 3;
+
+                // Use the noisy Y value to select a block. The modulo operator (%) cycles through the numbers 0-5.
+                num blockSelector = floor(noisyY / 4) % 6;
+
+                // Place a different terracotta block based on the selector value
+                if (blockSelector == 0) {
+                    block(x, y, z, "minecraft:terracotta");
+                } else if (blockSelector == 1) {
+                    block(x, y, z, "minecraft:orange_terracotta");
+                } else if (blockSelector == 2) {
+                    block(x, y, z, "minecraft:red_terracotta");
+                } else if (blockSelector == 3) {
+                    block(x, y, z, "minecraft:brown_terracotta");
+                } else if (blockSelector == 4) {
+                    block(x, y, z, "minecraft:yellow_terracotta");
+                } else { // Catches 5 and any other values
+                    block(x, y, z, "minecraft:white_terracotta");
+                }
+
+            }
+        }
+    }
+
+}
