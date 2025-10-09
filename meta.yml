@@ -98,7 +98,7 @@ digger:
   stoneStartY: 200
   stoneEndY: -316
 
-biomeSize: 50
+biomeSize: 40
 continentSize: 500
 continentalHeight: 90
 baseY: 210

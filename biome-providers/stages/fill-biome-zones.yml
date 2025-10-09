@@ -3,7 +3,7 @@ stages:
     from: _lowlands_wet
     sampler:  &biomeSampler
       type: "DOMAIN_WARP"
-      amplitude: 30
+      amplitude: 40
       warp:
         type: "FBM"
         octaves: 3

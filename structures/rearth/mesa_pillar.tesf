@@ -1,9 +1,9 @@
 // Mesa Pillar Configuration
 num randPrecision = 100;
-num minHeight = 30;
+num minHeight = 20;
 num maxHeight = 85;
 num minWidth = 10;
-num maxWidth = 16;
+num maxWidth = 14;
 
 
 // Set random height and width
@@ -18,7 +18,7 @@ for (num y = -10; y < height; y = y + 1) {
     num maxRadius = height - y;
     radius = min(radius, maxRadius * 3 - 1);
 
-    num radiusBonus = min(6, max(0, 3 - y));
+    num radiusBonus = min(2, max(0, 2 - y));
     radius = radius + radiusBonus;
 
     for (num x = -baseWidth - radiusBonus; x <= baseWidth + radiusBonus; x = x + 1) {
