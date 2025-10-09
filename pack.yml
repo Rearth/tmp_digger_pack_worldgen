@@ -121,6 +121,3 @@ samplers:
   "<<":
     - math/samplers/simplex.yml:samplers
     - math/elevation.yml:samplers
-
-slant:
-  calculation-method: DotProduct

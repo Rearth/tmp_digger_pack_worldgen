@@ -26,8 +26,8 @@ locator:
   locators:
     - type: PATTERN
       range: &range
-        min: 64
-        max: 150
+        min: 200
+        max: 250
       pattern:
         type: AND
         patterns:

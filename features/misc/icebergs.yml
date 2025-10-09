@@ -20,8 +20,8 @@ distributor:
 locator:
   type: PATTERN
   range:
-    min: 60
-    max: 65
+    min: 196
+    max: 201
   pattern:
     type: MATCH
     block: minecraft:water

@@ -103,7 +103,7 @@ continentSize: 500
 continentalHeight: 90
 baseY: 210
 
-precipationScale: 500
+precipationScale: 400
 
 
 palette-bottom: # Added to the bottom of every palette

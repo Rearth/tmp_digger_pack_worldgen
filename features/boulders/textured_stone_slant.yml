@@ -13,8 +13,8 @@ locator:
   locators:
     - type: SAMPLER_3D
       range: &range
-        min: 70
-        max: 160
+        min: 206
+        max: 280
       sampler:
         type: ADD
         left:

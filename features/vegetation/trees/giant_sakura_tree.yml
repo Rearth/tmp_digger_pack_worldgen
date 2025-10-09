@@ -1,0 +1,21 @@
+id: GIANT_SAKURA_TREE
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 110
+  padding: 50
+  salt: 5132
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range:
+        min: 170
+        max: 220
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: custom_sakura_tree

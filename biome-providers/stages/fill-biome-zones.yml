@@ -1,65 +1,60 @@
+precipationSampler: &biomeSampler
+  type: "DOMAIN_WARP"
+  amplitude: 40
+  warp:
+    type: "FBM"
+    octaves: 3
+    sampler:
+      type: "OPEN_SIMPLEX_2S"
+      frequency: 1 / ${meta.yml:biomeSize}
+  sampler:
+    type: "CELLULAR"
+    return: "CellValue"
+    frequency: 1 / ${meta.yml:biomeSize}
+    seed: 2345263
+
 stages:
-  - type: REPLACE
-    from: _lowlands_wet
-    sampler:  &biomeSampler
-      type: "DOMAIN_WARP"
-      amplitude: 40
-      warp:
-        type: "FBM"
-        octaves: 3
-        sampler:
-          type: "OPEN_SIMPLEX_2S"
-          frequency: 1 / ${meta.yml:biomeSize}
-      sampler:
-        type: "CELLULAR"
-        return: "CellValue"
-        frequency: 1 / ${meta.yml:biomeSize}
-        seed: 2345263
-    to:
-      VARIANT_A: 1
-      VARIANT_B: 1
-      VARIANT_C: 1
-      VARIANT_D: 1
-  - type: REPLACE
-    from: _lowlands_arid
-    sampler: *biomeSampler
-    to:
-      VARIANT_E: 1
-      VARIANT_F: 1
-      VARIANT_G: 1
-      VARIANT_H: 1
-  - type: REPLACE
-    from: _lowlands_dry
-    sampler: *biomeSampler
-    to:
-      VARIANT_I: 1
-  - type: REPLACE
-    from: _hills_wet
-    sampler: *biomeSampler
-    to:
-      VARIANT_B: 1
-  - type: REPLACE
-    from: _hills_arid
-    sampler: *biomeSampler
-    to:
-      VARIANT_E: 1
-  - type: REPLACE
-    from: _hills_dry
-    sampler: *biomeSampler
-    to:
-      VARIANT_H: 1
-  - type: REPLACE
-    from: _mountains_wet
-    sampler: *biomeSampler
-    to:
-      VARIANT_C: 1
-  - type: REPLACE
-    from: _mountains_arid
-    sampler: *biomeSampler
-    to:
-      VARIANT_F: 1
-  - type: REPLACE
-    from: _mountains_dry
-    sampler: *biomeSampler
-    to:
-      VARIANT_I: 1
+- type: REPLACE
+  from: _dry
+  sampler: *biomeSampler
+  to:
+    ARID_SPIKES: 1
+    BADLANDS_BUTTES: 1
+    CRACKED_BADLANDS_PLATEAU: 1
+    DESERT_FLATS: 1
+    DESERT_SPIKES_GOLD: 1
+    DESERT_SPIKES: 1
+    DESERT: 1
+    ERODED_BADLANDS_BUTTES: 1
+    ROCKY_DESERT: 1
+    SALT_FLATS: 1
+    XERIC_HILLS: 1
+
+- type: REPLACE
+  from: _semidry
+  sampler: *biomeSampler
+  to:
+    CHAPARRAL: 1
+    OAK_SAVANNA: 1
+    PALM_FOREST: 1
+    PRAIRIE: 1
+    SAVANNA_HILLS: 1
+
+- type: REPLACE
+  from: _semiwet
+  sampler: *biomeSampler
+  to:
+    CERROS_DE_MAVECURE: 1
+    EUCALYPTUS_FOREST: 1
+    GRASS_SAVANNA_HILLS: 1
+    WILD_HIGHLANDS: 1
+    SAKURA_MOUNTAINS: 1
+
+- type: REPLACE
+  from: _wet
+  sampler: *biomeSampler
+  to:
+    BAMBOO_JUNGLE_HILLS: 1
+    BAMBOO_JUNGLE_MOUNTAINS: 1
+    JUNGLE_HILLS: 1
+    JUNGLE_MOUNTAINS: 1

@@ -1,11 +1,16 @@
 precipitation-map: &precipitationMap
-  dimensions: 2
-  type: FBM
-  octaves: 3
+  type: "DOMAIN_WARP"
+  amplitude: 60
+  warp:
+    type: "FBM"
+    octaves: 3
+    sampler:
+      type: "OPEN_SIMPLEX_2S"
+      frequency: 1 / ${meta.yml:precipationScale}
   sampler:
-    type: OPEN_SIMPLEX_2
-    salt: 5055
+    type: "OPEN_SIMPLEX_2"
     frequency: 1 / ${meta.yml:precipationScale}
+    seed: 2345263
 
 
 
@@ -35,31 +40,16 @@ biomes:
           from: land
           to: 
             _lowlands: 10
-            _hills: 0
-            _mountains: 0
             
             
         - type: REPLACE
           from: _lowlands
           sampler: *precipitationMap
           to:
-            _lowlands_wet: 1
-            _lowlands_arid: 0
-            _lowlands_dry: 0
-        - type: REPLACE
-          from: _hills
-          sampler: *precipitationMap
-          to:
-            _hills_wet: 1
-            _hills_arid: 1
-            _hills_dry: 1
-        - type: REPLACE
-          from: _mountains
-          sampler: *precipitationMap
-          to:
-            _mountains_wet: 1
-            _mountains_arid: 1
-            _mountains_dry: 1
+            _wet: 1
+            _semiwet: 1
+            _semidry: 1
+            _dry: 1
 
 
         - << biome-providers/stages/fill-biome-zones.yml:stages
@@ -73,9 +63,9 @@ biomes:
         # # Expansion and smoothing
         # # - Make biomes bigger + blend the borders to look more natural.
         - << biome-providers/stages/expand.yml:stages
-        # - << biome-providers/stages/expand.yml:stages
+        - << biome-providers/stages/expand.yml:stages
         - << biome-providers/stages/smooth.yml:stages
-        # - << biome-providers/stages/smooth.yml:stages
+        - << biome-providers/stages/smooth.yml:stages
         # - << biome-providers/stages/smooth.yml:stages
         # - << biome-providers/stages/expand.yml:stages
         # - << biome-providers/stages/smooth.yml:stages

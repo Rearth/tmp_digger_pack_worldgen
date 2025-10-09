@@ -7,8 +7,8 @@ distributor:
 locator:
   type: PATTERN
   range:
-    min: 62
-    max: 63
+    min: 198
+    max: 199
   pattern:
     type: AND
     patterns:

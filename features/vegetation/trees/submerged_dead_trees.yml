@@ -13,8 +13,8 @@ locator:
   locators:
     - type: PATTERN
       range: &range
-        min: 64
-        max: 255
+        min: 200
+        max: 310
       pattern:
         type: MATCH_SET
         blocks: $features/vegetation/meta.yml:aquatic-plantable-blocks

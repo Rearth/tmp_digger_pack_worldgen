@@ -21,8 +21,8 @@ locator:
   locators:
     - type: TOP
       range: &range
-        min: 64
-        max: 180
+        min: 200
+        max: 270
     - type: PATTERN
       range: *range
       pattern:

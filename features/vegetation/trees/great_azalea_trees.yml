@@ -12,8 +12,8 @@ locator:
   locators:
     - type: TOP
       range:
-        min: 0
-        max: 50
+        min: 170
+        max: 220
 
 structures:
   distribution:
