@@ -1,0 +1,21 @@
+id: GIANT_JUNGLE_TREE
+type: FEATURE
+
+distributor:
+  type: PADDED_GRID
+  width: 40
+  padding: 10
+  salt: 5132
+
+locator:
+  type: AND
+  locators:
+    - type: TOP
+      range:
+        min: 170
+        max: 270
+
+structures:
+  distribution:
+    type: CONSTANT
+  structures: custom_jungle_tree

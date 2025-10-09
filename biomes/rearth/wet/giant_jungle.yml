@@ -1,4 +1,4 @@
-id: JUNGLE_HILLS
+id: JUNGLE_OF_GIANTS
 type: BIOME
 extends: [ DIG_BASE ]
 vanilla: minecraft:jungle
@@ -39,6 +39,8 @@ slant:
       - << meta.yml:palette-bottom
 
 features:
+  deposits:
+    - GIANT_JUNGLE_TREE
   flora:
     - GRASS
     - LARGE_LEAF_VINES
@@ -51,9 +53,10 @@ features:
     - SMALL_DRIPLEAF
     - BIG_DRIPLEAF
   trees:
-    - JUNGLE_TREES
+    - LARGE_JUNGLE_TREES
     - JUNGLE_BUSHES
     - POTATO_PATCHES
   landforms:
     - MOSSY_BOULDERS
     - SMALL_MOSSY_BOULDER_PATCHES
+    - MESA_PILLARS

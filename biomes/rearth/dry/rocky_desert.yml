@@ -38,3 +38,4 @@ features:
   landforms:
     - GRANITE_BOULDERS
     - SMALL_GRANITE_BOULDER_PATCHES
+    - MESA_PILLARS

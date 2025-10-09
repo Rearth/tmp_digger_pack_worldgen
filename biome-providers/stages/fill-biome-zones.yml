@@ -12,7 +12,7 @@ precipationSampler: &biomeSampler
     return: "CellValue"
     frequency: 1 / ${meta.yml:biomeSize}
     seed: 2345263
-
+#  todo add rock features, arid arboretum-like vegetation
 stages:
 - type: REPLACE
   from: _dry
@@ -56,5 +56,5 @@ stages:
   to:
     BAMBOO_JUNGLE_HILLS: 1
     BAMBOO_JUNGLE_MOUNTAINS: 1
-    JUNGLE_HILLS: 1
+    JUNGLE_OF_GIANTS: 1
     JUNGLE_MOUNTAINS: 1
