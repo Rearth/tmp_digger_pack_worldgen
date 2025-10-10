@@ -39,8 +39,6 @@ slant:
       - << meta.yml:palette-bottom
 
 features:
-  deposits:
-    - GIANT_JUNGLE_TREE
   flora:
     - GRASS
     - LARGE_LEAF_VINES
@@ -56,7 +54,7 @@ features:
     - LARGE_JUNGLE_TREES
     - JUNGLE_BUSHES
     - POTATO_PATCHES
+    - GIANT_JUNGLE_TREE
   landforms:
     - MOSSY_BOULDERS
     - SMALL_MOSSY_BOULDER_PATCHES
-    - MESA_PILLARS

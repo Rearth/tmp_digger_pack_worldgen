@@ -30,7 +30,7 @@ distributor:
       threshold: 1  # needs to be lower to spawn
 
 locator:
-  type: TOP
+  type: SURFACE
   range:
     min: 200
     max: 300

@@ -1,12 +1,12 @@
 precipitation-map: &precipitationMap
   type: "DOMAIN_WARP"
-  amplitude: 60
+  amplitude: 120
   warp:
     type: "FBM"
     octaves: 3
     sampler:
       type: "OPEN_SIMPLEX_2S"
-      frequency: 1 / ${meta.yml:precipationScale}
+      frequency: 1 / ${meta.yml:precipationScale} * 2
   sampler:
     type: "OPEN_SIMPLEX_2"
     frequency: 1 / ${meta.yml:precipationScale}

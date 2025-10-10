@@ -12,7 +12,7 @@ precipationSampler: &biomeSampler
     return: "CellValue"
     frequency: 1 / ${meta.yml:biomeSize}
     seed: 2345263
-#  todo add rock features, arid arboretum-like vegetation
+#  todo add rock features, arid arboretum-like vegetation, mushroom biome
 stages:
 - type: REPLACE
   from: _dry

@@ -2,7 +2,7 @@ num randPrecision = 100;
 num goldenAngle = 2.39996;
 num pi = 3.14159;
 
-num trunkHeight = 17+randomInt(14);
+num trunkHeight = 22+randomInt(14);
 str trunkBlock = "minecraft:jungle_log";
 num sideBranchInterval = 1;
 num sideBranchMinHeight = 13+randomInt(2);

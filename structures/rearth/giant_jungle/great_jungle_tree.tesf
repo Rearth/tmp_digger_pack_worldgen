@@ -17,7 +17,7 @@ str mossBlock = "minecraft:moss_block";
 num mossNoiseFrequency = 30;
 num mossThreshold = 0.25;
 
-num trunkHeight = 25+randomInt(10);
+num trunkHeight = 28+randomInt(10);
 num trunkRadius = 3+randomInt(2);
 num trunkBranches = 2+randomInt(2);
 num trunkBranchLength = trunkHeight * 0.7;
