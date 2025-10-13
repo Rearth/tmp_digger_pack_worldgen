@@ -1,0 +1,21 @@
+extrusions:
+  - type: REPLACE
+    from: ALL
+    sampler:
+      type: EXPRESSION
+      expression: |
+        1 // todo
+      samplers:
+        heightVariation:
+          dimensions: 3
+          type: OPEN_SIMPLEX_2S
+          frequency: 1 / ${meta.yml:biomeSize} * 1.5
+        caveMask:
+          dimensions: 2
+          type: OPEN_SIMPLEX_2S
+          frequency: 1 / ${meta.yml:biomeSize}
+    to:
+      - SELF: 1
+    range:
+      min: -60
+      max: 180
