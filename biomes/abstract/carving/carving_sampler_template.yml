@@ -3,8 +3,6 @@
 
 # dimensions: 3
 # type: EXPRESSION
-# expression: $biomes/abstract/carving/carving_sampler_template.yml:expression
-# samplers: $biomes/abstract/carving/carving_sampler_template.yml:samplers
 # variables:
 #   "<<":
 #     - biomes/abstract/carving/carving_sampler_template.yml:variables

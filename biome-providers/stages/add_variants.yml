@@ -60,7 +60,6 @@ stages:
     default-from: desert-spikes-microvariants
     default-to:
       - DESERT_SPIKES: 6
-      - DESERT_SPIKES_GOLD: 1
     to:
       DRY_TEMPERATE_MOUNTAINS:
         - SELF: 2

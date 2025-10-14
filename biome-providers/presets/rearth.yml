@@ -25,7 +25,13 @@ biomes:
       sampler:
         type: WHITE_NOISE
     pipeline:
-      source: $biome-providers/sources/land_only.yml:source
+      source:
+        type: SAMPLER
+        biomes:
+          - land: 1
+        sampler:
+          dimensions: 2
+          type: CONSTANT
   
       stages:
         - type: REPLACE

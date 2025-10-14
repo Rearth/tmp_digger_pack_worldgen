@@ -39,9 +39,6 @@ addons:
 # You can also further configure the behaviour of each preset in the
 # referenced file(s) below.
 
-# Default biome distribution
-# biomes: $biome-providers/presets/default.yml:biomes
-
 # Single biome - to change the single biome to use, check the configuration file.
 biomes: $biome-providers/presets/rearth.yml:biomes
 
