@@ -169,7 +169,7 @@ samplers:
     samplers:
       continent: *continentalElevation
       mediumDetail: *mediumDetail
-      warpedFeature:  &warpedFeature
+      warpedFeature:
         type: DOMAIN_WARP
         dimensions: 2
         sampler:
@@ -180,7 +180,7 @@ samplers:
           type: OPEN_SIMPLEX_2
           frequency: 1 / ${meta.yml:continentSize} * 3
         amplitude: 40
-      simpleFeature:  &simpleFeature
+      simpleFeature:
         dimensions: 2
         type: CELLULAR
         return: CellValue

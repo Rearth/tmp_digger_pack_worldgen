@@ -30,47 +30,47 @@
 # This behaviour is configured within each individual ore FEATURE config.
 
 lapis:
-  averageCountPerChunk: 2
+  averageCountPerChunk: 16
   salt: 3542
   range:
-    min: -32
-    max: 32
+    min: -40
+    max: 150
 
 lapis-uniform:
   averageCountPerChunk: 4
   salt: 5329
   range:
-    min: -64
-    max: 64
+    min: -150
+    max: 128
 
 diamond:
-  averageCountPerChunk: 6
+  averageCountPerChunk: 32
   salt: 1032
   range:
-    min: -144
-    max: 16
+    min: -200
+    max: 32
 
 iron:
-  averageCountPerChunk: 10
+  averageCountPerChunk: 32
   salt: 6921
   range:
-    min: -24
-    max: 56
+    min: 200
+    max: 319
 
 iron-uniform:
-  averageCountPerChunk: 10
+  averageCountPerChunk: 50
   salt: 2013
   range:
-    min: -64
-    max: 72
+    min: -200
+    max: 170
 
 iron-high:
-  averageCountPerChunk: 90
+  averageCountPerChunk: 130
   salt: 2031
   range:
-    min: 80
+    min: 240
     max: 384
-
+  # todo finish this
 copper:
   averageCountPerChunk: 16
   salt: 2932

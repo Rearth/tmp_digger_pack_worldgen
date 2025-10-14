@@ -12,11 +12,10 @@ precipitation-map: &precipitationMap
     frequency: 1 / ${meta.yml:precipationScale}
     seed: 2345263
 
-
-
 biomes:
   type: EXTRUSION
-  extrusions: []
+  extrusions:
+    - << biome-providers/extrusions/add_underworld.yml:extrusions
   provider:
     type: PIPELINE
     resolution: 2

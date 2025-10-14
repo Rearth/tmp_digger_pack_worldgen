@@ -1,0 +1,44 @@
+id: VARIANT_UNDERWORLD
+type: BIOME
+extends: CAVE
+
+vanilla: minecraft:plains
+
+palette:
+  - BLOCK:minecraft:white_wool: 319
+  - << meta.yml:palette-bottom
+
+terrain:
+  sampler:
+    dimensions: 3
+    type: CONSTANT
+    value: -4
+    
+# carving:
+#   update-palette: true
+#   sampler:
+#     dimensions: 3
+#     type: EXPRESSION
+#     expression: |
+#       underworld(x,y,z)
+#     samplers:
+#       underworld:
+#         dimensions: 3
+#         type: EXPRESSION
+#         expression: |
+#           -(abs(
+#             continentalElevation(x,z)
+#             - 1  //surface offset
+#             + heightVariation(x,z) * 20 // variation
+#             - y))
+#           + 30  // height
+#           + max(min(-pow(caveMask(x,z) + 0.4, 9), 0), -1) * 30  // closed areas
+#         samplers:
+#           heightVariation:
+#             dimensions: 2
+#             type: OPEN_SIMPLEX_2S
+#             frequency: 1 / ${meta.yml:biomeSize} * 1.5
+#           caveMask:
+#             dimensions: 2
+#             type: OPEN_SIMPLEX_2S
+#             frequency: 1 / ${meta.yml:biomeSize}

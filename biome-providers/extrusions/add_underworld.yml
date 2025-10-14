@@ -4,18 +4,23 @@ extrusions:
     sampler:
       type: EXPRESSION
       expression: |
-        1 // todo
+        -(abs(
+          heightVariation(x, y, z) * 15 // variation
+          - y))
+        + 30  // height offset
+        + max(min(-pow(caveMask(x,z) + 0.4, 9), 0), -1) * 70  // closed areas
       samplers:
         heightVariation:
           dimensions: 3
           type: OPEN_SIMPLEX_2S
-          frequency: 1 / ${meta.yml:biomeSize} * 1.5
+          frequency: 1 / ${meta.yml:underworldBiomeSize} * 1.5
         caveMask:
           dimensions: 2
           type: OPEN_SIMPLEX_2S
-          frequency: 1 / ${meta.yml:biomeSize}
+          frequency: 1 / ${meta.yml:underworldBiomeSize}
     to:
       - SELF: 1
+      - VARIANT_UNDERWORLD: 1
     range:
       min: -60
-      max: 180
+      max: 60

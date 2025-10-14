@@ -102,6 +102,7 @@ biomeSize: 40
 continentSize: 500
 continentalHeight: 90
 baseY: 210
+underworldBiomeSize: 300
 
 precipationScale: 400
 
