@@ -1,0 +1,26 @@
+id: CRYSTAL_CAVES
+type: BIOME
+extends: [ VARIANT_UNDERWORLD ]
+vanilla: minecraft:lush_caves
+color: $biomes/colors.yml:LUSH_CAVES
+
+
+colors:
+  fog: 0x000000
+  water: 0x102e38
+  water-fog: 0x171921
+  sky: 0x1c2742
+  grass: 0x163b46
+  foliage: 0x195a58
+
+palette:
+  - BLOCK:minecraft:stone: 319
+  - << meta.yml:palette-bottom
+
+
+features:
+  landforms:
+    - CRYSTAL_SPIKES
+  flora:
+    - CAVE_GLOW_LICHEN
+    - CRYSTAL_WEB

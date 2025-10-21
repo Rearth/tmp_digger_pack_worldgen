@@ -54,3 +54,11 @@ sculk-plantable-blocks:
   - minecraft:dark_oak_log
   - minecraft:dark_oak_planks
   - minecraft:dark_oak_fence
+  - minecraft:stone
+  - minecraft:deepslate
+  - oritech_excavations:hard_stone
+  - oritech_excavations:harder_stone
+  - oritech_excavations:harderer_stone
+  - oritech_excavations:deeper_slate
+  - oritech_excavations:very_deep_slate
+  - oritech_excavations:deepest_slate

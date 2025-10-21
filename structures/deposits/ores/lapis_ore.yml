@@ -2,10 +2,10 @@ id: LAPIS_ORE
 type: ORE
 extends: ABSTRACT_ORE
 
-material: minecraft:lapis_ore
+material: minecraft:deepslate_lapis_ore
 
 material-overrides:
-  minecraft:deepslate: minecraft:deepslate_lapis_ore
+  minecraft:stone: minecraft:lapis_ore
 
 size: 7
 

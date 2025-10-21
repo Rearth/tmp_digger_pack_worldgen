@@ -3,10 +3,10 @@ precipationSampler: &biomeSampler
   amplitude: 40
   warp:
     type: "FBM"
-    octaves: 3
+    octaves: 2
     sampler:
       type: "OPEN_SIMPLEX_2S"
-      frequency: 1 / ${meta.yml:biomeSize}
+      frequency: 1 / ${meta.yml:biomeSize} * 2
   sampler:
     type: "CELLULAR"
     return: "CellValue"

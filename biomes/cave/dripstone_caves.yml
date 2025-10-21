@@ -1,16 +1,17 @@
 id: DRIPSTONE_CAVES
 type: BIOME
-extends: [ CAVE, BASE ]
+extends: [ VARIANT_UNDERWORLD ]
 vanilla: minecraft:dripstone_caves
 color: $biomes/colors.yml:DRIPSTONE_CAVES
 
 palette:
   - DRIPSTONE_CAVES: 319
-  - DRIPSTONE_CAVES_DEEPSLATE: $meta.yml:strata.deepslate.top
-  - << meta.yml:palette-bedrock
-
-tags:
-  - USE_RIVER_TEMPERATE_MARSH
+  - << meta.yml:palette-bottom
+  
+slant:
+  - threshold: 1  # lower = less slant
+    palette:
+      - DRIPSTONE_CAVES_DEEPSLATE: 319
 
 features:
   preprocessors:

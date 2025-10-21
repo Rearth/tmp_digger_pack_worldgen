@@ -1,6 +1,6 @@
 id: DEEP_DARK
 type: BIOME
-extends: [ CAVE, BASE ]
+extends: [ VARIANT_UNDERWORLD ]
 vanilla: minecraft:deep_dark
 color: $biomes/colors.yml:DEEP_DARK
 

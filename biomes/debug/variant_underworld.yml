@@ -1,6 +1,17 @@
 id: VARIANT_UNDERWORLD
 type: BIOME
-extends: CAVE
+extends: 
+  - CAVE
+  - DEPOSITS_DEFAULT
+  - ORES_DEFAULT
+
+colors:
+  fog: 0x000000
+  water: 0x102e38
+  water-fog: 0x171921
+  sky: 0x1c2742
+  grass: 0x163b46
+  foliage: 0x195a58
 
 vanilla: minecraft:plains
 
@@ -11,8 +22,33 @@ palette:
 terrain:
   sampler:
     dimensions: 3
-    type: CONSTANT
-    value: -4
+    type: EXPRESSION
+    expression: |
+      underworld(x,y,z)
+    samplers:
+      underworld:
+        dimensions: 3
+        type: EXPRESSION
+        expression: |
+          abs( // returns negative distance from target height
+            20 // center
+            - y
+            + heightVariation(x,z) * 10
+          )
+          - 14 // thickness (half)
+          + max(min(-pow(caveMask(x,z) + 0.35, 7), 0), -1) * -50  // closed areas
+        samplers:
+          heightVariation:
+            dimensions: 2
+            type: "FBM"
+            octaves: 2
+            sampler:
+              type: OPEN_SIMPLEX_2S
+              frequency: 1 / ${meta.yml:underworldBiomeSize} * 2.5
+          caveMask:
+            dimensions: 2
+            type: OPEN_SIMPLEX_2S
+            frequency: 1 / ${meta.yml:underworldBiomeSize} * 3
     
 # carving:
 #   update-palette: true

@@ -98,11 +98,11 @@ digger:
   stoneStartY: 200
   stoneEndY: -316
 
-biomeSize: 40
+biomeSize: 30
 continentSize: 500
-continentalHeight: 90
+continentalHeight: 100
 baseY: 210
-underworldBiomeSize: 300
+underworldBiomeSize: 200
 
 precipationScale: 400
 

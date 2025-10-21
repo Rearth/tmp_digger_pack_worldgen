@@ -1,4 +1,4 @@
-id: LUSH_CAVES
+id: TERRACOTTA_CAVES
 type: BIOME
 extends: [ VARIANT_UNDERWORLD ]
 vanilla: minecraft:lush_caves
@@ -11,19 +11,13 @@ palette:
 slant:
   - threshold: 1  # lower = less slant
     palette:
-      - LUSH_CAVES_DEEPSLATE: 319
+      - BADLANDS_STRATA: 319
 
 
 features:
-  preprocessors:
-    - LUSH_CAVE_WATER_POOLS
+  landforms:
+    - CAVE_MESA_PILLARS
   flora:
+    - CAVE_GLOW_LICHEN
     - LARGE_LEAF_VINES_UNDERGROUND
-    - MOSS_CARPET
     - CAVE_GLOW_BERRIES
-    - CAVE_SPORE_BLOSSOMS
-    - SMALL_DRIPLEAF_CAVES
-    - BIG_DRIPLEAF_CAVES
-    - GRASS_CAVES
-    - AZALEA_BLOCK
-    - FLOWERING_AZALEA_BLOCK

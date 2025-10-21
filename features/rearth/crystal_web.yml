@@ -1,4 +1,4 @@
-id: SCULK_PATCHES
+id: CRYSTAL_WEB
 type: FEATURE
 
 # Adds patches of sculk blocks to the ground
@@ -36,9 +36,9 @@ locator:
 structures:
   distribution:
     type: OPEN_SIMPLEX_2
-    frequency: 0.02
+    frequency: 0.03
     salt: 727
   structures: 
-    - blank: 9
-    - place_adjacent_sculk_veins: 1
-    - BLOCK:minecraft:sculk: 4
+    - blank: 8
+    - BLOCK:spectrum:gray_glowblock: 1
+    - blank: 6

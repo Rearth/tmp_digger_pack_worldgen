@@ -10,8 +10,8 @@ distributor:
 locator:
   type: PATTERN
   range:
-    min: -64
-    max: 0
+    min: -10
+    max: 40
   pattern:
     type: AND
     patterns:

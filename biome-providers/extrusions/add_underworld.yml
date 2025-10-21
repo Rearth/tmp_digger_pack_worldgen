@@ -1,26 +1,34 @@
+undergroundSampler: &biomeSampler
+  type: "DOMAIN_WARP"
+  amplitude: 30
+  dimensions: 2
+  warp:
+    type: "FBM"
+    octaves: 2
+    sampler:
+      type: "OPEN_SIMPLEX_2S"
+      frequency: 1 / ${meta.yml:underworldBiomeSize} * 2 * 3
+  sampler:
+    type: "CELLULAR"
+    return: "CellValue"
+    frequency: 1 / ${meta.yml:underworldBiomeSize} * 3
+    seed: 43577
+
 extrusions:
   - type: REPLACE
     from: ALL
     sampler:
       type: EXPRESSION
       expression: |
-        -(abs(
-          heightVariation(x, y, z) * 15 // variation
-          - y + 20))
-        + 20  // height around 0
-        + max(min(-pow(caveMask(x,z) + 0.4, 9), 0), -1) * 70  // closed areas
+        biomeSampler(x,z)
       samplers:
-        heightVariation:
-          dimensions: 3
-          type: OPEN_SIMPLEX_2S
-          frequency: 1 / ${meta.yml:underworldBiomeSize} * 1.5
-        caveMask:
-          dimensions: 2
-          type: OPEN_SIMPLEX_2S
-          frequency: 1 / ${meta.yml:underworldBiomeSize}
+        biomeSampler: *biomeSampler
     to:
-      - SELF: 1
-      - VARIANT_UNDERWORLD: 0
+      - LUSH_CAVES: 1
+      - DRIPSTONE_CAVES: 1
+      - DEEP_DARK: 1
+      - TERRACOTTA_CAVES: 1
+      - CRYSTAL_CAVES: 2
     range:
-      min: -200
-      max: 200
+      min: -10
+      max: 50
