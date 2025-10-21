@@ -9,7 +9,6 @@ colors:
 
 palette:
   - GRASS_PODZOL_MUDDY: 319
-  - SAND: 61
   - << meta.yml:palette-bottom
 
 features:

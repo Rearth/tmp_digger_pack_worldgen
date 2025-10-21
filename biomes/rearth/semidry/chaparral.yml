@@ -10,15 +10,12 @@ tags:
 
 palette:
   - GRASS_VARIATION: 319
-  - SAND: 64
-  - MUDDY_BEACH: 61
   - << meta.yml:palette-bottom
 
 slant:
   - threshold: 5
     palette:
       - COARSE_DIRT: 319
-      - SAND: 64
       - << meta.yml:palette-bottom
   - threshold: 3.5
     palette:

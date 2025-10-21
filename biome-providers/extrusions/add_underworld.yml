@@ -6,8 +6,8 @@ extrusions:
       expression: |
         -(abs(
           heightVariation(x, y, z) * 15 // variation
-          - y))
-        + 30  // height offset
+          - y + 20))
+        + 20  // height around 0
         + max(min(-pow(caveMask(x,z) + 0.4, 9), 0), -1) * 70  // closed areas
       samplers:
         heightVariation:
@@ -20,7 +20,7 @@ extrusions:
           frequency: 1 / ${meta.yml:underworldBiomeSize}
     to:
       - SELF: 1
-      - VARIANT_UNDERWORLD: 1
+      - VARIANT_UNDERWORLD: 0
     range:
-      min: -60
-      max: 60
+      min: -200
+      max: 200
