@@ -5,17 +5,13 @@ vanilla: minecraft:jungle
 color: $biomes/colors.yml:BAMBOO_JUNGLE_MOUNTAINS
 
 palette:
-  - GRASS_PODZOL_MUDDY: 319
+  - WOODED_BADLANDS: 319
   - << meta.yml:palette-bottom
 
 slant:
-  - threshold: 2.5
-    palette:
-      - MOSS_STONE: 319
-      - << meta.yml:palette-bottom
   - threshold: 3.5
     palette:
-      - MOSSY_COBBLESTONE_STONE: 319
+      - TERRACOTTA_STRATA: 319
       - << meta.yml:palette-bottom
   - threshold: 4
     palette:
