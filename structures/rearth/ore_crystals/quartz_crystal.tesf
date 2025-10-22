@@ -1,0 +1,15 @@
+str blockID = "spectrum:quartz_cluster[facing=";
+str blockIDBud = "spectrum:large_quartz_bud[facing=";
+str blockIDSmallBud = "spectrum:small_quartz_bud[facing=";
+
+num size = randomInt(10);
+
+if (size < 3) blockID = blockIDSmallBud;
+if (size < 6) blockID = blockIDBud;
+
+if (structure(0, 1, 0, "is_rock", "NONE")) block(0, 0, 0, blockID + "down]", false);
+else if (structure(0, -1, 0, "is_rock", "NONE")) block(0, 0, 0, blockID + "up]", false);
+else if (structure(0, 0, -1, "is_rock", "NONE")) block(0, 0, 0, blockID + "south]", false);
+else if (structure(1, 0, 0, "is_rock", "NONE"))  block(0, 0, 0, blockID + "west]", false);
+else if (structure(0, 0, 1, "is_rock", "NONE"))  block(0, 0, 0, blockID + "north]", false);
+else if (structure(-1, 0, 0, "is_rock", "NONE")) block(0, 0, 0, blockID + "east]", false);

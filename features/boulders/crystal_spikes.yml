@@ -25,5 +25,11 @@ locator:
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: glow_spike
+    type: OPEN_SIMPLEX_2
+    frequency: 0.04
+    salt: 729
+  structures:
+    - amethyst_spike: 1
+    - citrin_spike: 1
+    - topaz_spike: 1
+    - crystal_spike: 1

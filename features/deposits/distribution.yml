@@ -62,7 +62,7 @@ iron-uniform:
   salt: 2013
   range:
     min: -200
-    max: 170
+    max: 210
 
 iron-high:
   averageCountPerChunk: 200
@@ -73,11 +73,11 @@ iron-high:
   # todo finish this
 
 copper:
-  averageCountPerChunk: 96
+  averageCountPerChunk: 150
   salt: 2932
   range:
-    min: -16
-    max: 112
+    min: -30
+    max: 384
 
 redstone:
   averageCountPerChunk: 64

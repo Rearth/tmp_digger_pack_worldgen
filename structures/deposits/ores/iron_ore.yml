@@ -6,5 +6,6 @@ material: minecraft:deepslate_iron_ore
 
 material-overrides:
   minecraft:stone: minecraft:iron_ore
+  oritech_excavations:hard_stone: minecraft:iron_ore
 
 size: 9

@@ -1,4 +1,4 @@
-id: CAVE_GLOW_LICHEN
+id: OVERWORLD_ORE_CRYSTALS
 type: FEATURE
 
 distributor:
@@ -6,7 +6,7 @@ distributor:
   sampler:
     type: POSITIVE_WHITE_NOISE
     salt: 2313
-  threshold: 0.2
+  threshold: 0.6
 
 locator:
   type: AND
@@ -14,21 +14,15 @@ locator:
     # Random heights
     - type: RANDOM
       height: &range
-        min: -10
-        max: 50
+        min: 100
+        max: 170
       amount: 1
       salt: 2913
-    # Require either air or water
     - type: PATTERN
       range: *range
       pattern:
-        type: OR
-        patterns:
-          - type: MATCH_AIR
-            offset: 0
-          - type: MATCH
-            block: minecraft:water
-            offset: 0
+        type: MATCH_AIR
+        offset: 0
     # Require an adjacent solid block
     - type: OR
       locators:
@@ -48,8 +42,14 @@ locator:
           pattern:
             type: MATCH_SOLID
             offset: 0
+            
 
 structures:
   distribution:
-    type: CONSTANT
-  structures: glow_lichen
+    type: OPEN_SIMPLEX_2
+    frequency: 0.04
+    salt: 729
+  structures: 
+    - coal_crystal: 12
+    - copper_crystal: 10
+    - iron_crystal: 10

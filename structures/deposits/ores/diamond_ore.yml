@@ -6,6 +6,7 @@ material: minecraft:deepslate_diamond_ore
 
 material-overrides:
   minecraft:stone: minecraft:diamond_ore
+  oritech_excavations:hard_stone: minecraft:diamond_ore
 
 size: 8
 

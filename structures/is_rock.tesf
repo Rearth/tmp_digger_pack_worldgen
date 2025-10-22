@@ -21,7 +21,15 @@ if (blockID != "minecraft:stone" &&
     blockID != "minecraft:deepslate_gold_ore" &&
     blockID != "minecraft:deepslate_redstone_ore" &&
     blockID != "minecraft:deepslate_emerald_ore" &&
-    blockID != "minecraft:deepslate_lapis_ore" &&
+    blockID != "minecraft:blackstone" &&
+    blockID != "minecraft:basalt" &&
+    blockID != "minecraft:netherrack" &&
+    blockID != "oritech_excavations:hard_stone" &&
+    blockID != "oritech_excavations:harder_stone" &&
+    blockID != "oritech_excavations:harderer_stone" &&
+    blockID != "oritech_excavations:deeper_slate" &&
+    blockID != "oritech_excavations:very_deep_slate" &&
+    blockID != "oritech_excavations:deepest_slate" &&
     blockID != "minecraft:deepslate_diamond_ore") {
     fail;
 }

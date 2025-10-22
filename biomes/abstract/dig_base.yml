@@ -19,3 +19,4 @@ slant:
 features:
   global-preprocessors:
     - MESA_PILLARS
+    - OVERWORLD_ORE_CRYSTALS

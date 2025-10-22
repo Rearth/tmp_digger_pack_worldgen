@@ -1,0 +1,8 @@
+str blockID = "oritech:uranium_crystal[facing=";
+
+if (structure(0, 1, 0, "is_rock", "NONE")) block(0, 0, 0, blockID + "down]", false);
+else if (structure(0, -1, 0, "is_rock", "NONE")) block(0, 0, 0, blockID + "up]", false);
+else if (structure(0, 0, -1, "is_rock", "NONE")) block(0, 0, 0, blockID + "south]", false);
+else if (structure(1, 0, 0, "is_rock", "NONE"))  block(0, 0, 0, blockID + "west]", false);
+else if (structure(0, 0, 1, "is_rock", "NONE"))  block(0, 0, 0, blockID + "north]", false);
+else if (structure(-1, 0, 0, "is_rock", "NONE")) block(0, 0, 0, blockID + "east]", false);

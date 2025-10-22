@@ -1,7 +1,7 @@
-id: CRYSTAL_WEB
+id: MAGMA_WEB
 type: FEATURE
 
-# Adds patches of sculk blocks to the ground
+# Adds patches of magma blocks to the ground
 
 distributor:
   type: "YES"
@@ -43,7 +43,7 @@ structures:
     salt: 727
   structures: 
     - blank: 14
-    - BLOCK:spectrum:light_blue_glowblock: 1
-    - BLOCK:spectrum:cyan_glowblock: 1
-    - BLOCK:spectrum:light_blue_glowblock: 1
+    - BLOCK:minecraft:obsidian: 1
+    - BLOCK:minecraft:magma_block: 1
+    - BLOCK:minecraft:obsidian: 1
     - blank: 8

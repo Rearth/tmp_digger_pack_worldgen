@@ -6,6 +6,7 @@ material: minecraft:deepslate_lapis_ore
 
 material-overrides:
   minecraft:stone: minecraft:lapis_ore
+  oritech_excavations:hard_stone: minecraft:lapis_ore
 
 size: 7
 

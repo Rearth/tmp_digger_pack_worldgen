@@ -19,15 +19,15 @@ locator:
   locators:
     - type: PATTERN
       range: &range
-        min: 200
-        max: 300
+        min: -10
+        max: 20
       pattern:
         type: AND
         patterns:
           - type: MATCH_AIR
             offset: 1
           - type: MATCH
-            block: minecraft:smooth_basalt
+            block: minecraft:basalt
             offset: 0
     - type: ADJACENT_PATTERN
       range: *range

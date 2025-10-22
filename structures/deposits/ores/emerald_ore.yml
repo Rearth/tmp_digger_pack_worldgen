@@ -6,5 +6,6 @@ material: minecraft:deepslate_emerald_ore
 
 material-overrides:
   minecraft:stone: minecraft:emerald_ore
+  oritech_excavations:hard_stone: minecraft:emerald_ore
 
 size: 3

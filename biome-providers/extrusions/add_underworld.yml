@@ -24,11 +24,12 @@ extrusions:
       samplers:
         biomeSampler: *biomeSampler
     to:
-      - LUSH_CAVES: 1
-      - DRIPSTONE_CAVES: 1
+      - LUSH_CAVES: 2
+      - DRIPSTONE_CAVES: 2
       - DEEP_DARK: 1
-      - TERRACOTTA_CAVES: 1
+      - TERRACOTTA_CAVES: 2
       - CRYSTAL_CAVES: 2
+      - INFERNAL_CAVES: 3
     range:
       min: -10
       max: 50

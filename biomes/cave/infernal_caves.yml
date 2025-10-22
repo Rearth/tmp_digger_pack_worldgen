@@ -1,0 +1,25 @@
+id: INFERNAL_CAVES
+type: BIOME
+extends: [ VARIANT_UNDERWORLD ]
+vanilla: minecraft:nether_wastes
+color: $biomes/colors.yml:LUSH_CAVES
+
+palette:
+  - LUSH_CAVES: 319
+  - << meta.yml:palette-bottom
+
+slant:
+  - threshold: 1  # lower = less slant
+    palette:
+      - BLACKSTONE_BASALT_MIX: 319
+
+
+features:
+  landforms:
+    - SMOOTH_LAVA
+    - LAVA_STEPS
+    - CONNECT_LAVA_STEPS
+    - MAGMA_WEB
+  flora:
+    - UNDERGROUND_LAVA_COLUMNS
+    - INFERNAL_ORE_CRYSTALS
