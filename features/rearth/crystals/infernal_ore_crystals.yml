@@ -47,5 +47,6 @@ structures:
     salt: 71
   structures: 
     - quartz_crystal: 12
-    - gold_crystal: 10
+    - gold_crystal: 6
     - netherite_scrap_crystal: 5
+    - glowstone_crystal: 8
