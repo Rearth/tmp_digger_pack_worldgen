@@ -1,6 +1,6 @@
 id: CRACKED_BADLANDS_PLATEAU
 type: BIOME
-extends: [ DIG_BASE ]
+extends: [ DIG_BASE, DRY_WATER_BASE ]
 vanilla: minecraft:badlands
 color: $biomes/colors.yml:CRACKED_BADLANDS_PLATEAU
 

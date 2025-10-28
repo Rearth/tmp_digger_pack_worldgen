@@ -1,6 +1,6 @@
 id: SALT_FLATS
 type: BIOME
-extends: [ DIG_BASE ]
+extends: [ DIG_BASE, DRY_WATER_BASE ]
 vanilla: minecraft:desert
 color: $biomes/colors.yml:SALT_FLATS
 

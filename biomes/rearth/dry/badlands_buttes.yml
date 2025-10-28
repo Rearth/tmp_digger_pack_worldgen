@@ -1,6 +1,6 @@
 id: BADLANDS_BUTTES
 type: BIOME
-extends: [ DIG_BASE ]
+extends: [ DIG_BASE, DRY_WATER_BASE ]
 vanilla: minecraft:badlands
 color: $biomes/colors.yml:BADLANDS_BUTTES
 
