@@ -1,7 +1,7 @@
 id: BAMBOO_JUNGLE_HILLS
 type: BIOME
-extends: [ DIG_BASE ]
-vanilla: minecraft:jungle
+extends: [ DIG_BASE, WET_WATER_BASE ]
+vanilla: minecraft:mangrove_swamp
 color: $biomes/colors.yml:BAMBOO_JUNGLE_HILLS
 
 colors:

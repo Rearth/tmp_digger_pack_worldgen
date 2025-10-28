@@ -1,0 +1,10 @@
+id: WET_WATER_BASE
+type: BIOME
+abstract: true
+
+features:
+  underwater-flora:
+    - MANGROVE_SEAGRASS
+    - MANGROVE_TREES
+    - LILY_PADS
+    - SUGAR_CANE

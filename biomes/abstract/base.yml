@@ -4,6 +4,10 @@ abstract: true
 
 slant-depth: 15
 
+ocean:
+  palette: BLOCK:minecraft:water
+  level: $meta.yml:oceanLevel
+
 features:
   global-preprocessors:
     - UNDERGROUND_LAVA_COLUMNS

@@ -104,10 +104,15 @@ continentalHeight: 120
 baseY: 210
 underworldBiomeSize: 200
 
+oceanLevel: 211
+sandLevel: 212
+
 precipationScale: 400
 
 
 palette-bottom: # Added to the bottom of every palette
+  - SANDY_BEACH: $meta.yml:sandLevel
+  - MUDDY_BEACH: ${meta.yml:oceanLevel}
   - HARD_GROUND: $meta.yml:digger.stoneStartY
   - BEDROCK: $meta.yml:strata.bedrock.top
   - BLOCK:minecraft:bedrock: $meta.yml:strata.bedrock.bottom

@@ -24,3 +24,4 @@ features:
   global-preprocessors:
     - MESA_PILLARS
     - OVERWORLD_ORE_CRYSTALS
+    - CONTAIN_FLOATING_WATER
