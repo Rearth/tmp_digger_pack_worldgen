@@ -134,14 +134,14 @@ emerald:
 # All deposits are uniformly distributed, unlike ore veins.
 
 granite:
-  averageCountPerChunk: 2
+  averageCountPerChunk: 10
   salt: 9141
   range:
-    min: 0
+    min: 100
     max: 319
 
 andesite:
-  averageCountPerChunk: 2
+  averageCountPerChunk: 10
   salt: 1923
   range:
     min: 0
@@ -155,32 +155,32 @@ dirt:
     max: 319
 
 diorite:
-  averageCountPerChunk: 2
+  averageCountPerChunk: 20
   salt: 6912
   range:
-    min: 0
+    min: 100
     max: 319
 
 clay:
-  averageCountPerChunk: 2
+  averageCountPerChunk: 30
   salt: 1785
   range:
     min: 50
     max: 319
 
 gravel:
-  averageCountPerChunk: 4
+  averageCountPerChunk: 15
   salt: 1239
   range:
-    min: -32
+    min: 120
     max: 319
 
 tuff:
-  averageCountPerChunk: 2
+  averageCountPerChunk: 10
   salt: 1239
   range:
-    min: -64
-    max: 0
+    min: 100
+    max: 319
 
 river-dripstone:
   averageCountPerChunk: 2
@@ -197,7 +197,7 @@ powdersnow:
     max: 319
 
 blueice:
-  averageCountPerChunk: 7
+  averageCountPerChunk: 1
   salt: 1678
   range:
     min: 40

@@ -100,7 +100,7 @@ digger:
 
 biomeSize: 30
 continentSize: 500
-continentalHeight: 100
+continentalHeight: 120
 baseY: 210
 underworldBiomeSize: 200
 
