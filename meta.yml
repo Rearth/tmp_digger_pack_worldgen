@@ -111,6 +111,8 @@ sandLevel: 212
 
 precipationScale: 400
 
+# todo add crystal veins / carvers
+
 
 palette-bottom: # Added to the bottom of every palette
   - SANDY_BEACH: $meta.yml:sandLevel

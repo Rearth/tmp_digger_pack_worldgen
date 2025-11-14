@@ -1,0 +1,26 @@
+id: HARDER_CRYSTAL_WORMS
+type: FEATURE
+
+
+distributor:
+  type: "YES"
+
+locator:
+  type: PATTERN
+  range:
+    min: -300
+    max: -100
+  pattern:
+    type: MATCH_SET
+    blocks: $features/vegetation/meta.yml:sculk-plantable-blocks
+    offset: 0
+
+structures:
+  distribution:
+    type: OPEN_SIMPLEX_2
+    frequency: 0.007
+    salt: 727
+  structures: 
+    - blank: 14
+    - BLOCK:oritech_excavations:reinforced_crystal_block: 1
+    - blank: 8
