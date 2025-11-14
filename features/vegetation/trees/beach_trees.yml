@@ -16,6 +16,9 @@ distributor:
           salt: 6923
       threshold: 0.35
 
+# todo add nickel ore crystals
+# todo change water to be slightly lower, add oceas as world change
+
 locator:
   type: AND
   locators:

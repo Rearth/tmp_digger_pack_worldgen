@@ -52,6 +52,7 @@ structures:
     - emerald_crystal: 1
     - gold_crystal: 6
     - uranium_crystal: 4
+    - nickel_crystal: 4
     - lapis_crystal: 7
     - redstone_crystal: 9
     - iron_crystal: 10

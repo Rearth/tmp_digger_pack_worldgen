@@ -91,12 +91,14 @@ strata: # Controls global Y level ranges of strata
     top: -20 # Y level where deepslate begins to replace stone
     bottom: -40 # Y level where all stone is replaced by deepslate
   bedrock:
-    top: -316 # Y level where bedrock begins to replace deepslate
-    bottom: -320 # Y level where all deepslate is replaced by bedrock
+    top: -312 # Y level where bedrock begins to replace deepslate
+    bottom: -316 # Y level where all deepslate is replaced by bedrock
+    lava: -319
+    barrier: -320
 
 digger:
   stoneStartY: 200
-  stoneEndY: -316
+  stoneEndY: -312
 
 biomeSize: 30
 continentSize: 500
@@ -116,6 +118,8 @@ palette-bottom: # Added to the bottom of every palette
   - HARD_GROUND: $meta.yml:digger.stoneStartY
   - BEDROCK: $meta.yml:strata.bedrock.top
   - BLOCK:minecraft:bedrock: $meta.yml:strata.bedrock.bottom
+  - BLOCK:oritech:still_sheol_fire_block: $meta.yml:strata.bedrock.lava
+  - BLOCK:minecraft:barrier: $meta.yml:strata.bedrock.barrier
   
 palette-bedrock: # Added to the bottom of palettes that use their own deepslate palette
   - HARD_GROUND: $meta.yml:digger.stoneStartY

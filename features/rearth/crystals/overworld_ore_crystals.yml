@@ -52,4 +52,5 @@ structures:
   structures: 
     - coal_crystal: 12
     - copper_crystal: 10
+    - nickel_crystal: 10
     - iron_crystal: 10
