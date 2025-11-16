@@ -13,6 +13,52 @@ slant:
     palette:
       - BLACKSTONE_BASALT_MIX: 319
 
+spawning:
+  costs:
+    - type:
+        id: minecraft:pig
+      mass: 1
+      gravity: 1
+  spawns:
+    - group: AMBIENT
+      entries:
+        - type:
+            id: minecraft:bat
+          min-group-size: 4
+          max-group-size: 4
+          weight: 10
+    - group: MONSTER
+      entries:
+        - type:
+            id: minecraft:ghast
+          min-group-size: 1
+          max-group-size: 1
+          weight: 100
+        - type:
+            id: minecraft:magma_cube
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: minecraft:piglin
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: minecraft:zombified_piglin
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: knightquest:gremlin
+          min-group-size: 2
+          max-group-size: 4
+          weight: 95
+        - type:
+            id: knightquest:bad_patch
+          min-group-size: 3
+          max-group-size: 5
+          weight: 95
 
 features:
   landforms:

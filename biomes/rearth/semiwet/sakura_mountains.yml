@@ -1,7 +1,7 @@
 id: SAKURA_MOUNTAINS
 type: BIOME
 extends: [ DIG_BASE ]
-vanilla: minecraft:plains
+vanilla: minecraft:cherry_grove
 color: $biomes/colors.yml:SAKURA_MOUNTAINS
 
 colors:

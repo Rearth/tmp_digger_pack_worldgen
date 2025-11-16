@@ -17,6 +17,47 @@ palette:
   - BLOCK:minecraft:stone: 319
   - << meta.yml:palette-bottom
 
+spawning:
+  costs:
+    - type:
+        id: minecraft:pig
+      mass: 1
+      gravity: 1
+  spawns:
+    - group: AMBIENT
+      entries:
+        - type:
+            id: minecraft:bat
+          min-group-size: 4
+          max-group-size: 4
+          weight: 10
+    - group: MONSTER
+      entries:
+        - type:
+            id: minecraft:spider
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: minecraft:slime
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: knightquest:fallen_knight
+          min-group-size: 3
+          max-group-size: 5
+          weight: 95
+        - type:
+            id: knightquest:ratman
+          min-group-size: 6
+          max-group-size: 8
+          weight: 95
+        - type:
+            id: mutantmonsters:mutant_skeleton
+          min-group-size: 6
+          max-group-size: 8
+          weight: 95
 
 features:
   landforms:

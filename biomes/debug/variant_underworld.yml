@@ -15,6 +15,44 @@ colors:
 
 vanilla: minecraft:plains
 
+spawning:
+  costs:
+    - type:
+        id: minecraft:pig
+      mass: 1
+      gravity: 1
+  spawns:
+    - group: AMBIENT
+      entries:
+        - type:
+            id: minecraft:bat
+          min-group-size: 4
+          max-group-size: 4
+          weight: 10
+    - group: MONSTER
+      entries:
+        - type:
+            id: minecraft:spider
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: knightquest:fallen_knight
+          min-group-size: 3
+          max-group-size: 5
+          weight: 95
+        - type:
+            id: knightquest:ratman
+          min-group-size: 6
+          max-group-size: 8
+          weight: 95
+        - type:
+            id: knightquest:eld_knight
+          min-group-size: 1
+          max-group-size: 2
+          weight: 95
+
+
 palette:
   - BLOCK:minecraft:white_wool: 319
   - << meta.yml:palette-bottom

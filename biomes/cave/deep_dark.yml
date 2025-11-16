@@ -8,6 +8,26 @@ palette:
   - BLOCK:minecraft:stone: 319
   - << meta.yml:palette-bottom
 
+spawning:
+  costs:
+    - type:
+        id: minecraft:pig
+      mass: 1
+      gravity: 1
+  spawns:
+    - group: MONSTER
+      entries:
+        - type:
+            id: minecraft:spider
+          min-group-size: 1
+          max-group-size: 3
+          weight: 100
+        - type:
+            id: spectrum:eraser
+          min-group-size: 1
+          max-group-size: 2
+          weight: 95
+
 features:
   preprocessors:
     - SCULK_WEBS
