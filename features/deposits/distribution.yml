@@ -30,96 +30,95 @@
 # This behaviour is configured within each individual ore FEATURE config.
 
 lapis:
-  averageCountPerChunk: 32
+  averageCountPerChunk: 12
   salt: 3542
   range:
-    min: -40
-    max: 150
+    min: -200
+    max: 120
 
 lapis-uniform:
   averageCountPerChunk: 8
   salt: 5329
   range:
-    min: -150
-    max: 128
+    min: -200
+    max: 120
 
 diamond:
-  averageCountPerChunk: 64
+  averageCountPerChunk: 32
   salt: 1032
   range:
-    min: -200
-    max: 32
+    min: -100
+    max: -270
 
 iron:
-  averageCountPerChunk: 128
+  averageCountPerChunk: 30
   salt: 6921
   range:
-    min: 200
+    min: -319
     max: 319
 
 iron-uniform:
-  averageCountPerChunk: 100
+  averageCountPerChunk: 40
   salt: 2013
   range:
-    min: -200
-    max: 210
+    min: -319
+    max: 319
 
 iron-high:
-  averageCountPerChunk: 200
+  averageCountPerChunk: 100
   salt: 2031
   range:
     min: 240
     max: 384
-  # todo finish this
 
 copper:
-  averageCountPerChunk: 150
+  averageCountPerChunk: 50
   salt: 2932
   range:
-    min: -30
-    max: 384
+    min: 50
+    max: 319
 
 redstone:
-  averageCountPerChunk: 64
+  averageCountPerChunk: 16
   salt: 7019
   range:
-    min: -96
-    max: -32
+    min: -100
+    max: 130
 
 redstone-uniform:
-  averageCountPerChunk: 128
+  averageCountPerChunk: 8
   salt: 1923
   range:
-    min: -64
-    max: 32
+    min: -100
+    max: 130
 
 coal:
-  averageCountPerChunk: 100
+  averageCountPerChunk: 60
   salt: 1068
   range:
-    min: -20
-    max: 192
+    min: 100
+    max: 319
 
 coal-uniform:
-  averageCountPerChunk: 60
+  averageCountPerChunk: 70
   salt: 7012
   range:
     min: 136
     max: 319
 
 gold:
-  averageCountPerChunk: 32
+  averageCountPerChunk: 16
   salt: 5912
   range:
-    min: -64
-    max: 32
+    min: -50
+    max: 150
 
 gold-uniform:
   averageCountPerChunk: 16
   salt: 3313
   range:
-    min: -64
-    max: -48
+    min: -50
+    max: 150
 
 emerald:
   averageCountPerChunk: 200
